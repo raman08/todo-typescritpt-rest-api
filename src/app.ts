@@ -1,0 +1,12 @@
+import express from 'express';
+import bodyParser from 'body-parser';
+import todoRoutes from './routes/todo';
+
+const app = express();
+
+app.use(bodyParser.json());
+app.use(todoRoutes);
+
+app.listen(3000, () => {
+	console.log('Server Started at http://localhost:3000');
+});
